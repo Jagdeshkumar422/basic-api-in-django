@@ -1,0 +1,60 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Virtual environments
+venv/
+env/
+*.env
+
+# Django-specific files
+db.sqlite3
+/media/
+/staticfiles/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Docker-related files
+docker-compose.override.yml
+.env
+*.pid
+
+# Node & Frontend (if using React/Vue)
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.pycoverage
+coverage.xml
+
+# Migrations (if regenerating frequently)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Gunicorn and Celery
+*.log
+celerybeat-schedule
+instance/
+
+# Ignore compiled files
+*.so
+*.o
+*.a
+*.pyc
+*.pyo

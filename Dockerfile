@@ -1,16 +1,19 @@
 # Use official Python image as base
-FROM python:3.9
+FROM python:3.12
 
 # Set the working directory
 WORKDIR /app
 
-# Copy project files
-COPY . .
+# Copy requirements file first (for better caching)
+COPY requirements.txt .
 
 # Install dependencies
-RUN pip install django djangorestframework djangorestframework-simplejwt psycopg2-binary
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port
+# Copy the rest of the project files
+COPY . .
+
+# Expose the port Django will run on
 EXPOSE 8000
 
 # Run Django server
